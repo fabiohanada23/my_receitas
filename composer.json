@@ -1,0 +1,15 @@
+{
+    "name": "fabio/my_receitas",
+    "autoload": {
+        "psr-4": {
+            "Fabio\\MyReceitas\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "fabiohanada23",
+            "email": "61828534+fabiohanada23@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
