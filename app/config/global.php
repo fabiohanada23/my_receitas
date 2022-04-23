@@ -1,4 +1,4 @@
 <?php
 
-define('BASE', '/my-site/');
+define('BASE', '/my_receitas/');
 define('UNSET_COUNT', 1);

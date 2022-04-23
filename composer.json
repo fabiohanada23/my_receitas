@@ -11,7 +11,9 @@
             "email": "61828534+fabiohanada23@users.noreply.github.com"
         }
     ],
-    "require": {},
+    "require": {
+        "twig/twig": "^3.3"
+    },
     "autoload": {
         "psr-4": {
             "app\\": "app/"
