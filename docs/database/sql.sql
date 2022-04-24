@@ -21,33 +21,33 @@ USE `myreceitas` ;
 -- Table `myreceitas`.`categoria`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `myreceitas`.`categoria` (
-                                                        `id` INT NOT NULL AUTO_INCREMENT,
-                                                        `titulo` VARCHAR(50) NOT NULL,
-    `slug` VARCHAR(60) NOT NULL,
-    PRIMARY KEY (`id`))
-    ENGINE = InnoDB;
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `titulo` VARCHAR(50) NOT NULL,
+  `slug` VARCHAR(60) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
 -- Table `myreceitas`.`receita`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `myreceitas`.`receita` (
-                                                      `id` INT NOT NULL AUTO_INCREMENT,
-                                                      `titulo` VARCHAR(100) NOT NULL,
-    `slug` VARCHAR(120) NOT NULL,
-    `linha_fina` VARCHAR(250) NOT NULL,
-    `descricao` TEXT NOT NULL,
-    `thumb` VARCHAR(100) NOT NULL,
-    `data` DATETIME NOT NULL,
-    `categoria_id` INT NOT NULL,
-    PRIMARY KEY (`id`),
-    INDEX `fk_receita_categoria_idx` (`categoria_id` ASC),
-    CONSTRAINT `fk_receita_categoria`
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `titulo` VARCHAR(100) NOT NULL,
+  `slug` VARCHAR(120) NOT NULL,
+  `linha_fina` VARCHAR(250) NOT NULL,
+  `descricao` TEXT NOT NULL,
+  `thumb` VARCHAR(100) NOT NULL,
+  `data` DATETIME NOT NULL,
+  `categoria_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_receita_categoria_idx` (`categoria_id` ASC),
+  CONSTRAINT `fk_receita_categoria`
     FOREIGN KEY (`categoria_id`)
     REFERENCES `myreceitas`.`categoria` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-    ENGINE = InnoDB;
+ENGINE = InnoDB;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

@@ -4,7 +4,6 @@ namespace app\core;
 
 class Router
 {
-
     private $uriEx;
 
     public function __construct()
@@ -13,8 +12,8 @@ class Router
         $this->execute();
     }
 
-    private function init(){
-
+    private function init()
+    {
         $uri = $_SERVER['REQUEST_URI'];
 
         $uri = str_replace('?', '/', $uri);
@@ -27,10 +26,10 @@ class Router
             unset($ex[$i]);
 
         $this->uriEx = $ex = array_values(array_filter($ex));
-
     }
 
-    private function execute(){
+    private function execute()
+    {
         $class  = 'HomeController';
         $method = 'index';
 
@@ -69,5 +68,4 @@ class Router
 
         return $p;
     }
-
 }
